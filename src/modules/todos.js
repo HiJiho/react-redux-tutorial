@@ -72,6 +72,8 @@ function todos(state = initialState, action) {
 				...state,
 				todos: state.todos.filter((todo) => todo.id !== action.id), // filter는 새로운 배렬 반환
 			};
+		default:
+			return state;
 	}
 }
 
