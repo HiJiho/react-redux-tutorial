@@ -14,6 +14,7 @@ const initialState = {
 	number: 0,
 };
 
+// 리듀서 정의
 const counter = handleActions(
 	// 첫번째 인자: 각 액션에 대한 업데이트 함수
 	{
