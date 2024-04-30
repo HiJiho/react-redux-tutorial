@@ -1,4 +1,5 @@
 import { createAction, handleActions } from "redux-actions";
+import { produce } from "immer";
 
 // 액션 타입 정의
 // 문자열 안에 모듈 이름을 넣어 액션 이름 충돌 방지
@@ -18,7 +19,10 @@ const initialState = {
 const counter = handleActions(
 	// 첫번째 인자: 각 액션에 대한 업데이트 함수
 	{
-		[INCREASE]: (state, action) => ({ number: state.number + 1 }),
+		[INCREASE]: (state, action) =>
+			produce(state, (draft) => {
+				draft.number += 1;
+			}),
 		[DECREASE]: (state, action) => ({ number: state.number - 1 }),
 	},
 	// 스토어의 초기 상태
