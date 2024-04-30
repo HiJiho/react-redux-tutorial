@@ -20,11 +20,13 @@ export const insert = (text) => ({
 	},
 });
 
+// todo.id
 export const toggle = (id) => ({
 	type: TOGGLE,
 	id,
 });
 
+// todo.id
 export const remove = (id) => ({
 	type: REMOVE,
 	id,
