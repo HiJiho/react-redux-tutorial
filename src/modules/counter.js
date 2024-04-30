@@ -7,7 +7,7 @@ const DECREASE = "counter/DECREASE";
 export const increase = () => ({ type: INCREASE });
 export const decrease = () => ({ type: DECREASE });
 
-// 모듈 초기 상태
+// 모듈 초기 상태, 그리고 스토어의 초기 상태
 const initialState = {
 	number: 0,
 };

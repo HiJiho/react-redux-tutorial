@@ -30,7 +30,7 @@ export const remove = (id) => ({
 	id,
 });
 
-// 모듈 초기 상태
+// 모듈 초기 상태, 그리고 스토어의 초기 상태
 const initialState = {
 	input: "",
 	todos: [
